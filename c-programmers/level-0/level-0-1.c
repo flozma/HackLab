@@ -1,0 +1,15 @@
+// 코딩 기초 트레이닝 - 문자열 출력하기
+
+#include <stdio.h>
+#define LEN_INPUT 1000001
+
+int main(void) {
+    char s1[LEN_INPUT];
+    
+    scanf("%s", s1);
+    
+    // write
+    printf("%s", s1);
+    
+    return 0;
+}
