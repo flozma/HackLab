@@ -1,6 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h> 
 
+/**
+ * malloc (동적할당)
+ * - 런타임(실행 중)에 길이를 결정한다.
+ * 
+ * char *var_str = (char *)malloc(10 * sizeof(char))
+ * - var_str은 Stack에 존재하는 포인터 변수
+ * - malloc에 의해 생성되는 데이터는 Heap에 존재 
+ * - 주소를 반환하기 때문에 char * 와 같이 포인터 형태
+ * 
+ * Syntactic Sugar
+ * var_str[3] == *(var_str + 3)
+ * 
+ * 
+ * 배열도 포인터처럼 사용 가능하다?
+ * - 배열의 이름이 대부분의 표현식에서 첫 번째 원소의 주소로 변환되기 때문
+ * 
+ * char str[] = "hello";
+ * - 컴파일러가 크기를 계산하여 배열을 생성
+ * 
+ * > 배열의 이름이 대부분의 상황에서 포인터로 변환될 뿐, 배열과 포인터는 서로 다른 타입
+ */
+
 int main(void)
 {
 int *p;
