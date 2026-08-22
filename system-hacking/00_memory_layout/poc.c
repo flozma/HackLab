@@ -5,8 +5,10 @@
 int uninitialized;
 const int initialized = 10;
 
+// Proof of Concept [01 Memory Layout]
 // lX : unsigned long
 // p: pointer
+// `make` : execute Makefile
 
 int main()
 {
@@ -15,18 +17,23 @@ int main()
   int pid = getpid();
   char buffer[64];
 
-  printf("age = %d", stack); // terminal(print out on stdout)
-  sprintf(buffer, "process-%d", pid); // save result on string buffer
-  sprintf(buffer, "cat /proc/%d/maps", pid); 
+  printf("age = %d\n", stack); // terminal(print out on stdout) 
+  sprintf(buffer, "process-%d\n", pid); // save result on string buffer
+  printf("Address of buffer : %s\n", buffer);
+  
+  sprintf(buffer, "cat /proc/%d/maps\n", pid); 
+  printf("Address of buffer : %s\n", buffer);
+  
 
   printf("===========================\n");
 
-  printf("Address of function : 0x%p\n", &main);
-  printf("Address of initialized data : 0x%p\n", &initialized);
-  printf("Address of uninitialized data : 0x%p\n", &uninitialized);
+  printf("Address of function : %p\n", &main);
+  printf("Address of initialized data : %p\n", &initialized);
+  printf("Address of uninitialized data : %p\n", &uninitialized);
 
-  printf("Address of heap : 0x%p\n", heap);
-  printf("Address of stack : 0x%p\n", &stack);
+  printf("Address of heap : %p\n", heap);
+  printf("Address of stack : %p\n", &stack);
+  printf("Address of buffer : %p\n", buffer);
 
   free(heap);
 

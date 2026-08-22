@@ -1,2 +1,2 @@
 all:
-	gcc -o poc poc.c -fno-stack-protector -no-pie -z relro -m32
+	gcc -o poc poc.c -fno-stack-protector -no-pie -z relro
