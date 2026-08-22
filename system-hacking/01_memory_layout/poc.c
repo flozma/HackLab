@@ -20,10 +20,11 @@ int main()
   printf("age = %d\n", stack); // terminal(print out on stdout) 
   sprintf(buffer, "process-%d\n", pid); // save result on string buffer
   printf("Address of buffer : %s\n", buffer);
+  system(buffer); // execution on system
   
   sprintf(buffer, "cat /proc/%d/maps\n", pid); 
   printf("Address of buffer : %s\n", buffer);
-  
+  system(buffer); // execution on system
 
   printf("===========================\n");
 
