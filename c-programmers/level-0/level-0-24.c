@@ -1,3 +1,5 @@
+// 코딩 기초 트레이닝 - 이어 붙인 수
+
 #include <stdio.h>
 #include <stdbool.h>
 #include <stdlib.h>
