@@ -5,23 +5,30 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef enum {
+    W = 'w',
+    S = 's',
+    D = 'd',
+    A = 'a',
+} WSDA;
+
 int solution(int n, const char* control) {
     int answer = n;
     
-    for(int i = 0; i < strlen(control); i++)
+    for(int i = 0; control[i] != '\0'; i++)
     {
         switch(control[i])
         {
-            case 'w':
+            case W:
                 answer += 1;
                 break;
-            case 's':
+            case S:
                 answer -= 1;
                 break;
-            case 'd':
+            case D:
                 answer += 10;
                 break;
-            case 'a':
+            case A:
                 answer -= 10;
                 break;
         }
