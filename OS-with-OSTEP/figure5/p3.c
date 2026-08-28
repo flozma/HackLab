@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     myargs[0] = strdup("wc"); // program : "wc"
     myargs[1] = strdup("p3.c"); // arg : input file
     myargs[2] = NULL; // mark end of array
-    execvp(myargs[0], myargs); // runs word count | elling us how many lines, words, and bytes are found in the p3.c
+    execvp(myargs[0], myargs); // runs word count | telling us how many lines, words, and bytes are found in the p3.c
     printf("this shouldn't print out");
   }
   else 
